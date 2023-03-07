@@ -1,0 +1,17 @@
+Procedure Insertion-sort(VAR tab : ARRAY-OF INTEGER)
+VAR
+i, key, j :INTEGER;
+BEGIN
+FOR i FROM 1 TO tab.lenght - 1 STEP 1 DO
+Key := tab[i];
+j:= i - 1;
+//Move elements of tab[0..i-1] that are greater than key
+//to the right position in the sorted sequence 
+WHILE(j >=0 && tab[j]> key) DO
+tab [j + 1] = tab [j];
+j = j -1 ;
+END WHILE 
+tab[j + 1] = key;
+END-FOR
+END
+
